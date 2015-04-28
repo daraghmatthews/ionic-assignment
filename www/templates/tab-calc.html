@@ -1,9 +1,45 @@
-<ion-view view-title="Calculator">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
-    </ion-list>
-  </ion-content>
+<ion-view view-title="Calorie Counter">
+	<ion-content>
+		<div id="output" class="row">  
+			<h1 class="col">0</h1>
+			<h5 class="col">Calories</h5>
+		</div>
+		
+		<div class="row">
+			<button class="button col mygrid" ng-click="reset()">AC</button>
+			<button class="button col mygrid" ng-click="write('(')">(</button>
+			<button class="button col mygrid" ng-click="write(')')">)</button>
+			<button class="button col mygrid operator" ng-click="write('/')">/</button>
+		</div>
+
+<div class="row">
+  <button class="button col mygrid" ng-click="write('7')">7</button>
+  <button class="button col mygrid" ng-click="write('8')">8</button>
+  <button class="button col mygrid" ng-click="write('9')">9</button>
+  <button class="button col mygrid operator" ng-click="write('*')">*</button>
+</div>
+
+<div class="row">
+  <button class="button col mygrid" ng-click="write('4')">4</button>
+  <button class="button col mygrid" ng-click="write('5')">5</button>
+  <button class="button col mygrid" ng-click="write('6')">6</button>
+  <button class="button col mygrid operator" ng-click="write('-')">-</button>
+</div>
+
+<div class="row">
+  <button class="button col mygrid" ng-click="write('1')">1</button>
+  <button class="button col mygrid" ng-click="write('2')">2</button>
+  <button class="button col mygrid" ng-click="write('3')">3</button>
+  <button class="button col mygrid operator" ng-click="write('+')">+</button>
+</div>
+
+<div class="row">
+  <button class="button col mygrid" ng-click="write('0')">0</button>
+  <button class="button col mygrid" ng-click="write('%')">%</button>
+  <button class="button col mygrid" ng-click="write('.')">.</button>
+  <button class="button col mygrid operator" ng-click="calculate()">=</button>
+</div>
+
+	</ion-content>
 </ion-view>
+
