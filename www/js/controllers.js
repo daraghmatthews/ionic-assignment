@@ -5,12 +5,12 @@ angular.module('calorific.controllers', [])
 .controller('foodsCtrl', function($scope, foods) {
   $scope.foods = foods.all();
   $scope.remove = function(foods) {
-    Chats.remove(foods);
+    foods.remove(foods);
   }
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
+.controller('foodDetailCtrl', function($scope, $stateParams, foods) {
+  $scope.foods = foods.get($stateParams.foodsId);
 })
 
 .controller('calcCtrl', function($scope) {

@@ -57,12 +57,12 @@ angular.module('calorific', ['ionic', 'calorific.controllers', 'calorific.servic
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+    .state('tab.food-detail', {
+      url: '/foods/:foodsId',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
+        'tab-foods': {
+          templateUrl: 'templates/food-detail.html',
+          controller: 'foodDetailCtrl'
         }
       }
     })
