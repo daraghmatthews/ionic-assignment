@@ -8,7 +8,9 @@ angular.module('calorific.services', [])
     id: 0,
     name: 'Apple',
     text: 'medium, 72 cal',
-    pic: 'img/apple.jpg'
+    pic: 'img/apple.jpg',
+	info: 'https://en.wikipedia.org/wiki/Apple',
+	recipes: 'http://www.bbcgoodfood.com/recipes/collection/apple'
   }, {
     id: 1,
     name: 'Bagel',

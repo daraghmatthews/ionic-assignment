@@ -6,9 +6,18 @@
 -->
 <ion-view view-title="{{foods.name}}">
   <ion-content class="padding">
-    <img ng-src="{{foods.pic}}" style="width: 64px; height: 64px">
+    <img ng-src="{{foods.pic}}" style="width: 150px; height: 150px">
     <p>
-      {{foods.text}}
+		{{foods.text}}
     </p>
+	<button class="button icon-left ion-plus-round button-block button-calm">
+		Add Calories
+	</button>
+	<a class="button icon-left ion-information-circled button-block button-balanced" href="{{foods.info}}">
+		Information
+	</a>
+	<a class="button icon-left ion-android-restaurant button-block button-positive" href="{{foods.recipes}}">
+		Recipes
+	</a>
   </ion-content>
 </ion-view>
