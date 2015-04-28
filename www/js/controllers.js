@@ -2,10 +2,10 @@ angular.module('calorific.controllers', [])
 
 .controller('homeCtrl', function($scope) {})
 
-.controller('foodsCtrl', function($scope, Chats) {
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+.controller('foodsCtrl', function($scope, foods) {
+  $scope.foods = foods.all();
+  $scope.remove = function(foods) {
+    Chats.remove(foods);
   }
 })
 

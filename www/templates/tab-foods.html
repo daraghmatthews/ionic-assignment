@@ -1,14 +1,14 @@
 <ion-view view-title="Food List">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" 
-	  type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.pic}}">
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.text}}</p>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="foods in foods" 
+	  type="item-text-wrap" href="#/tab/foods/{{foods.id}}">
+        <img ng-src="{{foods.pic}}">
+        <h2>{{foods.name}}</h2>
+        <p>{{foods.text}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+        <ion-option-button class="button-assertive" ng-click="remove(foods)">
           Delete
         </ion-option-button>
       </ion-item>

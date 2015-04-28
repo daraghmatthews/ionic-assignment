@@ -1,10 +1,10 @@
 angular.module('calorific.services', [])
 
-.factory('Chats', function() {
+.factory('foods', function() {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
-  var chats = [{
+  var foods = [{
     id: 0,
     name: 'Apple',
     text: 'medium, 72 cal',
@@ -47,7 +47,7 @@ angular.module('calorific.services', [])
   }, {
     id: 8,
     name: 'Chicken breast',
-    text: 'boneless, skinless, roasted, 3 ounces, 142 cal',
+    text: 'roasted, 85g, 142 cal',
     pic: 'img/chicken.jpg'
   }, {
     id: 9,
@@ -57,12 +57,12 @@ angular.module('calorific.services', [])
 	}, {
     id: 10,
     name: 'Chocolate chip cookie',
-    text: 'from packaged dough, 59 cal',
+    text: '59 cal',
     pic: 'img/cookie.jpg'
   }, {
     id: 11,
     name: 'Coffee',
-    text: 'regular, brewed from grounds, black, 2 cal',
+    text: 'regular, black, 2 cal',
     pic: 'img/coffee.jpg'
   }, {
     id: 12,
@@ -71,8 +71,8 @@ angular.module('calorific.services', [])
     pic: 'img/cola.jpg'
   }, {
     id: 13,
-    name: 'Sweetcorn',
-    text: 'canned, whole kernel, drained, 1 cup, 180 cal',
+    name: 'Corn',
+    text: 'canned, 1 cup, 180 cal',
     pic: 'img/corn.jpg'
   }, {
 	id: 14,
@@ -92,7 +92,7 @@ angular.module('calorific.services', [])
   }, {
     id: 17,
     name: 'Green beans',
-    text: 'canned, drained, 1 cup, 40 cal',
+    text: 'canned, 1 cup, 40 cal',
     pic: 'img/green-beans.jpg'
   }, {
     id: 18,
@@ -127,7 +127,7 @@ angular.module('calorific.services', [])
   }, {
     id: 24,
     name: 'Peanuts',
-    text: 'dry roasted, salted, 30g, 168 cal',
+    text: 'salted, 30g, 168 cal',
     pic: 'img/peanuts.jpg'
   }, {
     id: 25,
@@ -142,7 +142,7 @@ angular.module('calorific.services', [])
   }, {
     id: 27,
     name: 'Orange juice',
-    text: 'made from concentrate, 250ml, 112 cal',
+    text: '250ml, 112 cal',
     pic: 'img/orange-juice.jpg'
 	}, {
     id: 28,
@@ -228,15 +228,15 @@ angular.module('calorific.services', [])
 
   return {
     all: function() {
-      return chats;
+      return foods;
     },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+    remove: function(foods) {
+      foods.splice(foods.indexOf(foods), 1);
     },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(foodsId) {
+      for (var i = 0; i < foods.length; i++) {
+        if (foods[i].id === parseInt(foodsId)) {
+          return foods[i];
         }
       }
       return null;
