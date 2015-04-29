@@ -14,9 +14,15 @@ angular.module('calorific.controllers', [])
 })
 
 
-.controller('calcCtrl', function($scope, counter) {
-	$scope.input = "test";
+.controller('calcCtrl', function($scope) {
+	$scope.result = 0;
+		
 	$scope.reset = function() {
-		$scope.input = "0";
+		$scope.result = 0;
 	};
+	
+	$scope.add = function(i) {
+		$scope.result = $scope.result + parseInt(i);
+	};
+	
 });

@@ -335,24 +335,15 @@ angular.module('calorific.services', [])
 {
     var input = 0;
 	
-    var setTime = function(minutes){
-        data.value =  minutes  * 60;
-        data.time = data.value;
-
-
+	
+    var reset = function () {
+        stop();
+        data.value = 0;
+        updateClock();
+        isRunning = false;
     };
-    var start = function () {
-        if(isRunning === false){
-            increment();
-            isRunning = true;
-        }
-    };
-    var addStart = function () {
-        if(isRunning === false){
-            decrement();
-            isRunning = true;
-        }
-    };
+    
+    
     var increment = function(){
         stopwatch = $timeout(function() {
             data.value++;
@@ -365,48 +356,22 @@ angular.module('calorific.services', [])
         }, eachTick);
 
     };
-    var decrement = function(){
-        stopwatch = $timeout(function() {
-            data.value--;
-            updateClock();
-            decrement();
-            if(data.value == 0){
-                stop();
-            }
 
-        },eachTick);
-
-    };
     var updateClock = function(){
         data.minutes =(data.value-(data.value %60))/60;
         data.seconds = data.value%60;
     }
 
-
-
-    var stop = function () {
-        $timeout.cancel(stopwatch);
-        stopwatch = null;
-        isRunning = false;
-    };
-
-    var reset = function () {
-        stop();
-        data.value = 0;
-        updateClock();
-        isRunning = false;
-    };
+    
     var getDuration = function(){
         return data;
     };
+	
+	
     return{
-        data: data,
-        start: start,
-        stop: stop,
+        input: input,
         reset: reset,
-        setTime :setTime,
-        getDuration: getDuration,
-        addStart : addStart
+        getDuration: getDuration
     };
 
 

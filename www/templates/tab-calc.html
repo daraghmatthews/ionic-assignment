@@ -5,19 +5,25 @@
 			<button class="button button-light col col-100" style="font-size: 40px; text-align: right">0</button>
 		</div-->
 		
-		<form>
-			<div class="padding">
-				<label class="item item-input">
-				<input class="input-label" type="tel" value="{{input}}" ng-click="newVal()" 
-				style="font-size: 35px; text-align: right">
-				Calories
-				</label>
+		<div class="card">
+			<div class="item item-text-wrap" style="font-size: 35px; text-align: right">
+			{{result}} Total
 			</div>
-		</form>
+		</div>
+		
+		
+		<div class="padding">
+			<label class="item item-input">
+			<input class="input-label" placeholder="Add" type="tel" ng-model="T" 
+			style="font-size: 35px; text-align: right">
+			Calories
+			</label>
+		</div>
+		
 		
 		<div class="row">
 			<button class="button ion-refresh button-balanced col" ng-click="reset()" style="font-size: 40px"></button>
-			<button class="button ion-plus-round button-calm col" style="font-size: 40px" ng-click=""></button>
+			<button class="button ion-plus-round button-calm col" ng-click="add(T)" style="font-size: 40px"></button>
 		</div>
 
 	</ion-content>
