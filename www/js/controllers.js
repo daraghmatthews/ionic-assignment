@@ -9,16 +9,32 @@ angular.module('calorific.controllers', [])
   }
 })
 
-.controller('foodDetailCtrl', function($scope, $stateParams, foods) {
+.controller('foodDetailCtrl', function($scope, $stateParams, foods, dataService) {
   $scope.foods = foods.get($stateParams.foodsId);
+  
+  $scope.val;
+  $scope.send = function(i) {
+	$scope.val = parseInt(i);
+	$scope.val = dataService.dataObj;
+
+  
+  }
+})
+.controller('One', function($scope, dataService) {
+  $scope.data = dataService.dataObj;
 })
 
+.controller('Two', function($scope, dataService) {
+  $scope.data = dataService.dataObj;
+})
 
-.controller('calcCtrl', function($scope) {
+.controller('calcCtrl', function($scope, dataService) {
 	$scope.result = 0;
+	$scope.T = dataService.dataObj;
 		
 	$scope.reset = function() {
 		$scope.result = 0;
+		
 	};
 	
 	$scope.add = function(i) {
@@ -26,6 +42,7 @@ angular.module('calorific.controllers', [])
 		
 		}else {
 			$scope.result = $scope.result + parseInt(i);
+			
         }
 	};
 	

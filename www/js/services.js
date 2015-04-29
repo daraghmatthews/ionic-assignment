@@ -331,48 +331,11 @@ angular.module('calorific.services', [])
 })
 
 
-.factory('counter',function($timeout)
-{
-    var input = 0;
-	
-	
-    var reset = function () {
-        stop();
-        data.value = 0;
-        updateClock();
-        isRunning = false;
-    };
-    
-    
-    var increment = function(){
-        stopwatch = $timeout(function() {
-            data.value++;
-            updateClock()
-            increment();
-            if(data.value == 0){
-                stop();
-            }
-
-        }, eachTick);
-
-    };
-
-    var updateClock = function(){
-        data.minutes =(data.value-(data.value %60))/60;
-        data.seconds = data.value%60;
-    }
-
-    
-    var getDuration = function(){
-        return data;
-    };
-	
-	
-    return{
-        input: input,
-        reset: reset,
-        getDuration: getDuration
-    };
+.factory('dataService', function() {
+  var _dataObj = {};
+  return {
+    dataObj: _dataObj
+  };
 
 
 
