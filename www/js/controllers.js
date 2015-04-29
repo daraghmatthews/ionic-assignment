@@ -22,7 +22,11 @@ angular.module('calorific.controllers', [])
 	};
 	
 	$scope.add = function(i) {
-		$scope.result = $scope.result + parseInt(i);
+		if(!i){
+		
+		}else {
+			$scope.result = $scope.result + parseInt(i);
+        }
 	};
 	
 });
