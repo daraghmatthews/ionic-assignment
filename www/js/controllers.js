@@ -13,8 +13,10 @@ angular.module('calorific.controllers', [])
   $scope.foods = foods.get($stateParams.foodsId);
 })
 
-.controller('calcCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
+
+.controller('calcCtrl', function($scope, counter) {
+	$scope.input = "test";
+	$scope.reset = function() {
+		$scope.input = "0";
+	};
 });

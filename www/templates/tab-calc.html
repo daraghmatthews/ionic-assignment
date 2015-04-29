@@ -8,13 +8,15 @@
 		<form>
 			<div class="padding">
 				<label class="item item-input">
-				<input class="input-label" type="tel" value="0" style="font-size: 35px; text-align: right">
+				<input class="input-label" type="tel" value="{{input}}" ng-click="newVal()" 
+				style="font-size: 35px; text-align: right">
+				Calories
 				</label>
 			</div>
 		</form>
 		
 		<div class="row">
-			<button class="button ion-refresh button-balanced col" style="font-size: 40px" ng-click="reset()"></button>
+			<button class="button ion-refresh button-balanced col" ng-click="reset()" style="font-size: 40px"></button>
 			<button class="button ion-plus-round button-calm col" style="font-size: 40px" ng-click=""></button>
 		</div>
 
