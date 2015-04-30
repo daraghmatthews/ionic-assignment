@@ -9,8 +9,16 @@ angular.module('calorific.controllers', [])
   }
 })
 
-.controller('foodDetailCtrl', function($scope, $stateParams, foods) {
+.controller('foodDetailCtrl', function($scope, $stateParams, $state, foods) {
   $scope.foods = foods.get($stateParams.foodsId);
+  
+  $scope.send = function(i) {
+	var val = parseInt(i);
+	
+	$state.go('tab.calc');
+	
+	
+  }
   
 })
 
