@@ -1,6 +1,10 @@
 angular.module('calorific.controllers', [])
 
-.controller('homeCtrl', function($scope) {})
+.controller('homeCtrl', function($scope, total) {
+
+	$scope.figure = total.get();
+
+})
 
 .controller('foodsCtrl', function($scope, foods) {
   $scope.foods = foods.all();
@@ -23,7 +27,8 @@ angular.module('calorific.controllers', [])
 })
 
 
-.controller('calcCtrl', function($scope) {
+.controller('calcCtrl', function($scope, total) {
+
 	$scope.result = 0;
 		
 	$scope.reset = function() {
@@ -36,6 +41,7 @@ angular.module('calorific.controllers', [])
 		
 		}else {
 			$scope.result = $scope.result + parseInt(i);
+			total.set(i);
 			
         }
 	};

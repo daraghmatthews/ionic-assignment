@@ -329,3 +329,20 @@ angular.module('calorific.services', [])
     }
   };
 })
+
+
+.factory('total', function() {
+
+	var val = 0;
+	
+	return {
+	get: function() {
+		return val;
+	},
+	set: function(num) {
+		val = parseInt(num);
+		}
+	};	
+})
+
+
