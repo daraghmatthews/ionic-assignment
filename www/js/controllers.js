@@ -33,7 +33,7 @@ angular.module('calorific.controllers', [])
 		
 	$scope.reset = function() {
 		$scope.result = 0;
-		
+		total.set($scope.result);
 	};
 	
 	$scope.add = function(i) {
