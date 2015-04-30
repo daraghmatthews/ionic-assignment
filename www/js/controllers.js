@@ -41,7 +41,7 @@ angular.module('calorific.controllers', [])
 		
 		}else {
 			$scope.result = $scope.result + parseInt(i);
-			total.set(i);
+			total.set($scope.result);
 			
         }
 	};
