@@ -16,9 +16,8 @@ angular.module('calorific.controllers', [])
 .controller('foodDetailCtrl', function($scope, $stateParams, $state, foods) {
   $scope.foods = foods.get($stateParams.foodsId);
   
-  $scope.send = function(i) {
-	var val = parseInt(i);
-	
+  $scope.send = function() {
+		
 	$state.go('tab.calc');
 	
 	
@@ -34,6 +33,7 @@ angular.module('calorific.controllers', [])
 	$scope.reset = function() {
 		$scope.result = 0;
 		total.set($scope.result);
+		
 	};
 	
 	$scope.add = function(i) {

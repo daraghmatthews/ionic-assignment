@@ -345,4 +345,3 @@ angular.module('calorific.services', [])
 	};	
 })
 
-
