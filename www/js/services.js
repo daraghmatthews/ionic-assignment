@@ -333,14 +333,14 @@ angular.module('calorific.services', [])
 
 .factory('total', function() {
 
-	var val = 0;
+	var data = {val : 0};
 	
 	return {
 	get: function() {
-		return val;
+		return data;
 	},
 	set: function(num) {
-		val = parseInt(num);
+		data.val = parseInt(num);
 		}
 	};	
 })
