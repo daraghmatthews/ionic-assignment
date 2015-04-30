@@ -2,6 +2,8 @@ angular.module('calorific.services', [])
 
 .factory('foods', function() {
   
+  /* This array named foods contains all the data required for the food list and the food details. It is an array of JS 
+	 objects (JSON) and each object has 6 key:value pairs */
   var foods = [{
     id: 0,
     name: 'Apple',
@@ -331,15 +333,16 @@ angular.module('calorific.services', [])
 })
 
 
+/* This is the factory used to share the total between the calculator and the home state*/
 .factory('total', function() {
 
 	var data = {val : 0};
 	
 	return {
-	get: function() {
+	get: function() {				// returns the whole object so must declare data.val on recieving in tab-home html 
 		return data;
 	},
-	set: function(num) {
+	set: function(num) {			// sets the value to a new value. used for resetting and adding in the calculator
 		data.val = parseInt(num);
 		}
 	};	

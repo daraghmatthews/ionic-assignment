@@ -1,17 +1,29 @@
+<!-- This is the html for 'home'. This is the 1st page viewed on start up. 
+     This page shows a welcome image and the current total from the counter state. I have achieved this by sharing data
+	 between controllers using a factory. -->
+
+
+
 <ion-view view-title="Calorific">
   <ion-content class="padding">
+  
     <div class="list card">
       <div class="item item-divider">Total</div>
       <div class="item item-body">
-        <div ng-model="figure.val">
+	  
+		<!-- ng-model binds the value of this HTML <div> to figure.val in this states controller -->
+        <div ng-model="figure.val">		
+		
+		  <!-- brackets, {{}}, enters expression value into html and updates when the expression value changes -->
           <b>{{figure.val}}</b> calories consumed today
         </div>
       </div>
     </div>
+	
     <div class="list card">
       <div class="item item-image">
         <div>
-          <img ng-src="img/front.jpg" style="width: 200px; height: 200px">
+          <img ng-src="img/front.jpg" style="width: 200px; height: 200px">  <!-- source declared and size optimised -->
         </div>
       </div>
     </div>

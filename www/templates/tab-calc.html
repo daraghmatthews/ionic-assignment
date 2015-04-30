@@ -1,20 +1,23 @@
+<!-- html for cal counter. contains a card which displays the total, an input to allow users input the figure they would
+	 like to add to the total, and 2 buttons for refreshing the total and to add the input. I have tried keep this template 
+	 quite simple and free from buttons. this is why i have used an input.-->
+
+
 <ion-view view-title="Calorie Counter">
 	<ion-content class="padding">
-	
-		<!--div id="output" class="row">  
-			<button class="button button-light col col-100" style="font-size: 40px; text-align: right">0</button>
-		</div-->
 		
 		<div class="card">
 			<div class="item item-text-wrap" style="font-size: 35px; text-align: right">
-			{{result}} Total
+			{{result}} Total 			<!-- result from calCtrl is displayed and updates -->
 			</div>
 		</div>
 		
 		
 		<div class="padding">
 			<label class="item item-input">
-			<input class="input-label" placeholder="Add" type="tel" ng-model="T" 
+			
+			<!-- value inputted will called "T"  -->
+			<input class="input-label" placeholder="Add" type="tel" ng-model="T"     
 			style="font-size: 35px; text-align: right">
 			Calories
 			</label>
@@ -22,7 +25,9 @@
 		
 		
 		<div class="row">
+			<!-- calls reset function when clicked -->
 			<button class="button ion-refresh button-balanced col" ng-click="reset()" style="font-size: 40px"></button>
+			<!-- Can now add "T" tot total with the add function in calcCtrl controller -->
 			<button class="button ion-plus-round button-calm col" ng-click="add(T)" style="font-size: 40px"></button>
 		</div>
 

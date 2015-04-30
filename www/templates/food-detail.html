@@ -1,8 +1,8 @@
 <!--
-  This template loads for the 'tab.friend-detail' state (app.js)
-  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
-  The FriendsCtrl pulls data from the Friends service (service.js)
-  The Friends service returns an array of friend data
+  This template loads for the 'tab.food-detail' state (app.js)
+  'food' is a $scope variable created in the foodsCtrl controller (controllers.js)
+  foodsCtrl pulls data from the foods service or factory in service.js
+  foods service returns an array of food data. This page displays array elements for each individual food
 -->
 <ion-view view-title="{{foods.name}}">
   <ion-content class="padding">
@@ -10,12 +10,18 @@
     <p>
 		{{foods.text}}
     </p>
+	
+	<!-- On click this button will call send function which changes the state -->
 	<a class="button icon-left ion-plus-round button-block button-calm" ng-click="send()">
 		Add Calories
 	</a>
+	
+	<!-- links to a website containing useful info -->
 	<a class="button icon-left ion-information-circled button-block button-balanced" href="{{foods.info}}">
 		Information
 	</a>
+	
+	<!-- links to a website containing recipes for this particular food -->
 	<a class="button icon-left ion-android-restaurant button-block button-positive" href="{{foods.recipes}}">
 		Recipes
 	</a>
