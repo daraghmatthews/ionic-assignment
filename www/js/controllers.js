@@ -16,7 +16,7 @@ angular.module('calorific.controllers', [])
   }
 })
 
-	/* also gets food array eleements from foods factory to display */
+	/* also gets food array elements from foods factory to display */
 .controller('foodDetailCtrl', function($scope, $stateParams, $state, foods) {
   $scope.foods = foods.get($stateParams.foodsId);
   
