@@ -1,6 +1,7 @@
 This my 'Calorific' calorie counter app. It contains 4 states and 1 abstract state which is used for tabs. All states contain a
 header with the current state name and tabs along the bottom. There are 3 tabs that link to different states. The app name has
-been changed in the config.xml file to Calorific as it's a catchier name. 
+been changed in the config.xml file to Calorific as it's a catchier name. This app, and all commit history, is available on 
+github at: https://github.com/daraghmatthews/ionic-assignment.git 
 
 On loading the app the very first time the app opens into the 'home' state. This displays the current calorie total and a 
 welcome image. The current total is displayed here using a factory to share data between controllers and I am proud of this
