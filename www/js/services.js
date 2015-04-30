@@ -329,14 +329,3 @@ angular.module('calorific.services', [])
     }
   };
 })
-
-
-.factory('dataService', function() {
-  var _dataObj = {};
-  return {
-    dataObj: _dataObj
-  };
-
-
-
-})

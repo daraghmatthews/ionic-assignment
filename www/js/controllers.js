@@ -9,28 +9,14 @@ angular.module('calorific.controllers', [])
   }
 })
 
-.controller('foodDetailCtrl', function($scope, $stateParams, foods, dataService) {
+.controller('foodDetailCtrl', function($scope, $stateParams, foods) {
   $scope.foods = foods.get($stateParams.foodsId);
   
-  $scope.val;
-  $scope.send = function(i) {
-	$scope.val = parseInt(i);
-	$scope.val = dataService.dataObj;
-
-  
-  }
-})
-.controller('One', function($scope, dataService) {
-  $scope.data = dataService.dataObj;
 })
 
-.controller('Two', function($scope, dataService) {
-  $scope.data = dataService.dataObj;
-})
 
-.controller('calcCtrl', function($scope, dataService) {
+.controller('calcCtrl', function($scope) {
 	$scope.result = 0;
-	$scope.T = dataService.dataObj;
 		
 	$scope.reset = function() {
 		$scope.result = 0;
