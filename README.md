@@ -5,7 +5,8 @@ github at: https://github.com/daraghmatthews/ionic-assignment.git
 
 On loading the app the very first time the app opens into the 'home' state. This displays the current calorie total and a 
 welcome image. The current total is displayed here using a factory to share data between controllers and I am proud of this
-feature. When the total in the calorie counter state is changed it will update here also.
+feature. When the total in the calorie counter state is changed it will update here also. This app uses local storage. Therefore
+the present state and any data entered will be held in memory on closing and re-opening.  
 
 There is also a 'food list' state which displays a large number of common foods and they're calories. On clicking on a 
 particular food item a different state is entered. This is the food-detail state and shows the picture for  the food list item
